@@ -1,15 +1,28 @@
-Source: template-repository
-Section: unknown
+Source: zope.proxy
+Section: zope
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Build-Depends: debhelper-compat (= 13),
+               dh-python,
+               python3-all-dev,
+               python3-setuptools,
+               python3-zope.interface,
+               python3-zope.security,
+Standards-Version: 4.6.0
+Rules-Requires-Root: no
+Homepage: https://github.com/zopefoundation/zope.proxy
+Testsuite: autopkgtest-pkg-python
+Vcs-Browser: https://salsa.debian.org/python-team/packages/zope.proxy
+Vcs-Git: https://salsa.debian.org/python-team/packages/zope.proxy.git
 
-Package: template-repository
+Package: python3-zope.proxy
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Depends: ${misc:Depends}, ${python3:Depends}, ${shlibs:Depends}
+Conflicts: zope3
+Description: Generic transparent proxies for Python
+ Proxies are special objects which serve as mostly-transparent wrappers around
+ another object, intervening in the apparent behavior of the wrapped object
+ only when necessary to apply the policy (e.g., access checking, location
+ brokering, etc.) for which the proxy is responsible.
+ .
+ This is the Python 3 version.
