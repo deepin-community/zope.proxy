@@ -1,0 +1,24 @@
+From: Debian Python Team <team+python@tracker.debian.org>
+Date: Wed, 5 Jun 2024 13:32:44 +0100
+Subject: fix-import-for-test
+
+---
+ src/zope/proxy/tests/test_proxy.py | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+diff --git a/src/zope/proxy/tests/test_proxy.py b/src/zope/proxy/tests/test_proxy.py
+index 68d2e50..ee5f57f 100644
+--- a/src/zope/proxy/tests/test_proxy.py
++++ b/src/zope/proxy/tests/test_proxy.py
+@@ -16,7 +16,10 @@
+ import pickle
+ import unittest
+ 
+-from .. import _c_available
++try:
++    from .. import _c_available
++except ImportError:
++    from zope.proxy import _c_available
+ 
+ 
+ try:

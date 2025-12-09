@@ -1,5 +1,287 @@
-template-repository (1.0-1) unstable; urgency=medium
+zope.proxy (6.1-1) unstable; urgency=medium
 
-  * Initial release
+  * New upstream release.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Colin Watson <cjwatson@debian.org>  Sun, 06 Oct 2024 14:21:07 +0100
+
+zope.proxy (6.0-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Colin Watson <cjwatson@debian.org>  Fri, 20 Sep 2024 06:37:46 -0700
+
+zope.proxy (5.3-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Colin Watson <cjwatson@debian.org>  Fri, 09 Aug 2024 10:40:44 +0100
+
+zope.proxy (5.2-1) unstable; urgency=medium
+
+  * Adopt package for the Debian Python Team (closes: #948813).
+  * New upstream release.
+
+ -- Colin Watson <cjwatson@debian.org>  Wed, 05 Jun 2024 13:40:22 +0100
+
+zope.proxy (5.1-3) unstable; urgency=medium
+
+  * QA upload.
+  * Fix autopkg test, importing from the installed module.
+
+ -- Matthias Klose <doko@debian.org>  Thu, 21 Dec 2023 14:28:48 +0100
+
+zope.proxy (5.1-2) unstable; urgency=medium
+
+  * QA upload.
+  * Fix test failures with Python 3.12.
+
+ -- Matthias Klose <doko@debian.org>  Tue, 05 Dec 2023 21:41:52 +0100
+
+zope.proxy (5.1-1) unstable; urgency=medium
+
+  * QA upload.
+  * New upstream version, compatible with Python 3.12.
+
+ -- Matthias Klose <doko@debian.org>  Tue, 07 Nov 2023 08:29:31 +0100
+
+zope.proxy (4.5.0-1) unstable; urgency=medium
+
+  * QA upload.
+  * New upstream version 4.5.0
+  * d/watch:
+    - Update to version 4
+    - Drop unused option-lines.
+  * d/control:
+    - Update standards version to 4.6.0
+    - Switch homepage PyPI -> GitHub.
+  * Add upstream testsuite as autopkgtest.
+
+ -- Håvard Flaget Aasen <haavard_aasen@yahoo.no>  Mon, 22 Nov 2021 00:12:48 +0100
+
+zope.proxy (4.3.5-2) unstable; urgency=medium
+
+  * QA upload.
+
+  [ Ondřej Nový ]
+  * d/control: Update Vcs-* fields with new Debian Python Team Salsa
+    layout.
+
+ -- Jelmer Vernooĳ <jelmer@debian.org>  Tue, 02 Feb 2021 18:27:15 +0000
+
+zope.proxy (4.3.5-1) unstable; urgency=medium
+
+  * QA upload.
+  * New upstream version 4.3.5
+  * Update Standards-Version to 4.5.0
+  * Bump debhelper to 13
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse
+  * Implement upstream testsuite during build
+
+ -- Håvard Flaget Aasen <haavard_aasen@yahoo.no>  Sat, 02 May 2020 13:04:45 +0200
+
+zope.proxy (4.3.3-1) unstable; urgency=medium
+
+  [ Håvard Flaget Aasen ]
+  * QA upload.
+  * New upstream release.
+  * Change to debhelper-compat.
+  * Bump debhelper to 12.
+  * Update Standards-Version to 4.4.1.
+  * Add Rules-Requires-Root: no.
+  * Use secure URI on homepage.
+  * Remove Files-Exluded from debian/copyright, files don't exist upstream.
+  * Use Secure URI in debian/watch.
+  * Add hardening in debian/rules.
+  * Disable tests.
+
+  [ Andrej Shadura ]
+  * d/control: Add Vcs-* field.
+  * Use secure URI in Homepage field.
+
+ -- Håvard Flaget Aasen <haavard_aasen@yahoo.no>  Wed, 01 Jan 2020 14:41:06 +0100
+
+zope.proxy (4.2.0-3) unstable; urgency=medium
+
+  * Replace custom autopkgtest with autodep8
+
+ -- Paul Gevers <elbrus@debian.org>  Sat, 21 Sep 2019 14:09:44 +0200
+
+zope.proxy (4.2.0-2) unstable; urgency=medium
+
+  * QA upload.
+  * Orphan the package. Closes: #869473.
+  * Stop building the Python2 package. Closes: #938911.
+  * Fix lintian warnings.
+
+ -- Matthias Klose <doko@debian.org>  Thu, 05 Sep 2019 08:41:19 +0200
+
+zope.proxy (4.2.0-1.1) unstable; urgency=high
+
+  * Non-maintainer upload.
+  * Move header files to correct location. (Closes: #920029)
+
+ -- Dominik George <natureshadow@debian.org>  Sat, 23 Feb 2019 19:19:08 +0100
+
+zope.proxy (4.2.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * d/control:
+    - Minimum upstream Python versions are 2.7 and 3.3.
+    - Bump Standards-Version to 3.9.8 with no other changes needed.
+    - Add python{,3}-zope.security to Build-Depends.
+
+ -- Barry Warsaw <barry@debian.org>  Tue, 30 Aug 2016 18:04:09 -0400
+
+zope.proxy (4.1.6-1) unstable; urgency=medium
+
+  * New upstream release.
+  * d/control: Bump Standards-Version with no other changes necessary.
+  * d/copyright:
+    - Update Format URL.
+    - Added Files-Excluded header to prune pre-build Sphinx artifacts in
+      docs/_build from the original tarball.
+  * d/watch: Use pypi.debian.net redirector.
+
+ -- Barry Warsaw <barry@debian.org>  Tue, 09 Jun 2015 18:00:11 -0400
+
+zope.proxy (4.1.4-2) unstable; urgency=medium
+
+  * Simplify DEP-8 tests so that they just ensure that the package is
+    importable in both Python 2 and Python 3.
+
+ -- Barry Warsaw <barry@debian.org>  Mon, 30 Jun 2014 14:22:36 -0400
+
+zope.proxy (4.1.4-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * d/control:
+    - Updated Build-Depends.
+    - Added myself to Uploaders.
+    - Bump Standards-Version to 3.9.5 with no other changes necessary.
+    - Added X-Python3-Version header.
+    - Added XS-Testsuite header.  Closes: #692689
+    - Added python3-zope.proxy binary package.
+  * d/rules: Convert to pybuild and add dh_python3.
+  * d/compat: Bump to version 9.
+
+ -- Barry Warsaw <barry@debian.org>  Tue, 24 Jun 2014 20:25:23 -0400
+
+zope.proxy (3.6.1-2) unstable; urgency=low
+
+  * Team upload.
+  * debian/clean: remove to make sure all files are installed.
+  * debian/source/options: ignore .egg-info directory.
+
+ -- Arnaud Fontaine <arnau@debian.org>  Tue, 08 Nov 2011 22:23:20 +0900
+
+zope.proxy (3.6.1-1) unstable; urgency=low
+
+  * Team upload.
+  * New upstream release.
+  * Switch to dh_python2 (Closes: #617173):
+    - debian/control: remove python-central and python-van.pydeb from
+      Build-Depends.
+    - debian/rules: replace pydeb and python-central with python2.
+  * debian/control:
+    - Add Homepage and Vcs-Browser fields.
+    - Bump Standards-Version to 3.9.2, no changes needed.
+  * debian/rules: Don't include C source in the package.
+  * debian/copyright: update, convert to dep5 format.
+  * Switch to 3.0 (quilt) source format.
+  * Add debian/clean to get rid of egg-info/* to prevent FTBFS if built
+    twice.
+
+ -- Gediminas Paulauskas <menesis@pov.lt>  Tue, 18 Oct 2011 18:46:27 +0300
+
+zope.proxy (3.5.0-5) unstable; urgency=low
+
+  * Convert to debhelper 7 and the pydeb dh7 extension.
+
+ -- Fabio Tranchitella <kobold@debian.org>  Tue, 05 Jan 2010 21:35:17 +0100
+
+zope.proxy (3.5.0-4) unstable; urgency=low
+
+  [ Brian Sutherland ]
+  * Set priority to optional as we are depended on by python-zodb which is
+    priority optional.
+
+  [ Fabio Tranchitella ]
+  * debian/control: build-depend on pyton-vab.pydeb >= 1.3.0-2.
+    (Closes: #552978)
+
+ -- Fabio Tranchitella <kobold@debian.org>  Sun, 08 Nov 2009 11:23:24 +0100
+
+zope.proxy (3.5.0-3) unstable; urgency=low
+
+  * Set section to zope.
+  * Rebuild against van.pydeb 1.3.
+  * Don't include C source in the package.
+
+ -- Matthias Klose <doko@ubuntu.com>  Sun, 13 Sep 2009 10:21:25 +0200
+
+zope.proxy (3.5.0-2) unstable; urgency=low
+
+  * Conflict with zope3. Closes: #538180.
+  * Bump standards version.
+
+ -- Matthias Klose <doko@debian.org>  Wed, 26 Aug 2009 10:52:06 +0200
+
+zope.proxy (3.5.0-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Fabio Tranchitella <kobold@debian.org>  Thu, 18 Jun 2009 17:20:52 +0200
+
+zope.proxy (3.4.2-1) unstable; urgency=low
+
+  * New upstream release
+  * Convert to using python-van.pydeb.
+  * Change source package name to zope.proxy.
+  * Standards version 3.8.1.
+  * debhelper compat version -> 7
+  * Maintainer as the zope team, uploader is me.
+  * build for all python versions.
+  * Improve description
+  * Add watch and copyright files
+
+ -- Brian Sutherland <brian@vanguardistas.net>  Sun, 07 Jun 2009 10:53:54 +0200
+
+python-zope.proxy (3.4.0-1ubuntu3.2) lenny; urgency=low
+
+  * Non-maintainer upload.
+  * Rebuild for lenny
+
+ -- Brian Sutherland <brian@vanguardistas.net>  Fri, 08 May 2009 11:18:44 +0000
+
+python-zope.proxy (3.4.0-1ubuntu3.1) etch-devel; urgency=low
+
+  * Non-maintainer upload.
+  * Rebuild for etch-devel
+
+ -- Brian Sutherland <brian@vanguardistas.net>  Wed, 23 Jul 2008 09:46:21 +0200
+
+python-zope.proxy (3.4.0-1ubuntu3) hardy; urgency=low
+
+  * Make a new hardy release
+
+ -- Ignas Mikalajunas <ignas.mikalajunas@gmail.com>  Mon, 28 Apr 2008 15:42:00 +0300
+
+python-zope.proxy (3.4.0-1ubuntu2) gutsy; urgency=low
+
+  * Fix architecture to get 64 bit packages working properly
+
+ -- Ignas Mikalajunas <ignas.mikalajunas@gmail.com>  Mon, 28 Apr 2008 15:41:52 +0300
+
+python-zope.proxy (3.4.0-1ubuntu1) hardy; urgency=low
+
+  * Re-build for hardy
+
+ -- Ignas Mikalajunas <ignas.mikalajunas@gmail.com>  Wed, 23 Apr 2008 11:19:22 +0300
+
+python-zope.proxy (3.4.0-1) gutsy; urgency=low
+
+  * Inital Release
+
+ -- Brian Sutherland <brian@vanguardistas.net>  Thu,  8 Nov 2007 19:27:48 +0100
