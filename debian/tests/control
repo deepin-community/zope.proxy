@@ -1,4 +1,5 @@
 Tests: upstream
 Depends: python3-all,
          python3-zope.proxy,
+         python3-zope.security,
 Restrictions: allow-stderr
