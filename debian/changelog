@@ -1,3 +1,11 @@
+zope.proxy (6.1-1deepin1) unstable; urgency=medium
+
+  * Run zope.security integration tests in the autopkgtest, but not during
+    package build.
+  * Run tests using zope.testrunner.
+
+ -- Tianyu Chen <sweetyfish@deepin.org>  Tue, 09 Dec 2025 17:44:30 +0800
+
 zope.proxy (6.1-1) unstable; urgency=medium
 
   * New upstream release.

@@ -8,7 +8,7 @@ Build-Depends: debhelper-compat (= 13),
                python3-all-dev,
                python3-setuptools,
                python3-zope.interface,
-               python3-zope.security,
+               python3-zope.testrunner,
 Standards-Version: 4.6.0
 Rules-Requires-Root: no
 Homepage: https://github.com/zopefoundation/zope.proxy
